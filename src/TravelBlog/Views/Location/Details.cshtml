@@ -1,0 +1,13 @@
+﻿@model TravelBlog.Models.Location
+@{
+    ViewData["Title"] = "Location - Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Experience Details</h2>
+<hr />
+<p>@Html.DisplayNameFor(model => model.Planet): @Html.DisplayFor(model => model.Planet)</p>
+<p>@Html.DisplayNameFor(model => model.Biome): @Html.DisplayFor(model => model.Biome)</p>
+<p>@Html.DisplayNameFor(model => model.GalacticRegion): @Html.DisplayFor(model => model.GalacticRegion)</p>
+
+<p>@Html.ActionLink("Edit", "Edit", new { id = Model.LocationId }) | @Html.ActionLink("Back to List", "Index")</p>

@@ -1,0 +1,49 @@
+﻿@model IEnumerable<TravelBlog.Models.Location>
+
+@{
+    ViewData["Title"] = "Home Page";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Travel Blog</h2>
+<hr />
+<p>
+    @Html.ActionLink("Add New Location", "Create")
+</p>
+<table>
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Planet)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Biome)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.GalacticRegion)
+        </th>
+        <th></th>
+    </tr>
+
+    @foreach(var loc in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(model => loc.Planet) --
+            </td>
+            <td>
+                @Html.DisplayFor(model => loc.Biome) --
+            </td>
+            <td>
+                @Html.DisplayFor(model => loc.GalacticRegion) --
+            </td>
+            <td>
+                @Html.ActionLink("Edit", "Edit", new { id = loc.LocationId })
+                @Html.ActionLink("Details", "Details", new { id = loc.LocationId })
+                @Html.ActionLink("Delete", "Delete", new { id = loc.LocationId })
+            </td>
+        </tr>
+
+    }
+</table>
+
+

@@ -1,0 +1,23 @@
+﻿@model TravelBlog.Models.Location
+
+@{ 
+    ViewData["Title"] = "Location - Delete";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Wipe this pathetic planet from the face of the galaxy!</h2>
+<h3>- Darth Malak, KotOR</h3>
+
+@Html.DisplayNameFor(model => model.Planet) : @Html.DisplayFor(model => model.Planet)
+@Html.DisplayNameFor(model => model.Biome) : @Html.DisplayFor(model => model.Biome)
+@Html.DisplayNameFor(model => model.GalacticRegion) : @Html.DisplayFor(model => model.GalacticRegion)
+
+
+
+
+@using (Html.BeginForm())
+{
+    <input type="submit" value="Delete" />
+}
+
+<p>@Html.ActionLink("Back to home",  "Index")</p>

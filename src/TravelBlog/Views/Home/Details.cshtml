@@ -1,0 +1,17 @@
+﻿@model TravelBlog.Models.Experience
+@{
+    ViewData["Title"] = "Experience - Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Experience Details</h2>
+<hr />
+<p>@Html.DisplayNameFor(model => model.Date): @Html.DisplayFor(model => model.Date)</p>
+<p>@Html.DisplayNameFor(model => model.Description): @Html.DisplayFor(model => model.Description)</p>
+
+
+<p>@Html.DisplayNameFor(model => model.Location.Planet): @Html.DisplayFor(model => model.Location.Planet)</p>
+<p>@Html.DisplayNameFor(model => model.Location.Biome): @Html.DisplayFor(model => model.Location.Biome)</p>
+<p>@Html.DisplayNameFor(model => model.Location.GalacticRegion): @Html.DisplayFor(model => model.Location.GalacticRegion)</p>
+
+<p>@Html.ActionLink("Edit", "Edit", new { id = Model.ExperienceId }) | @Html.ActionLink("Back to List", "Index")</p>

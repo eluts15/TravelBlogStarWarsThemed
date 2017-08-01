@@ -1,0 +1,22 @@
+﻿@model TravelBlog.Models.Location
+@{
+    ViewData["Title"] = "Location - Create";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Add a new Location</h2>
+
+@using (Html.BeginForm())
+{
+    @Html.LabelFor(model => model.Planet)
+    @Html.EditorFor(model => model.Planet)
+
+    @Html.LabelFor(model => model.Biome)
+    @Html.EditorFor(model => model.Biome)
+
+    @Html.LabelFor(model => model.GalacticRegion)
+    @Html.EditorFor(model => model.GalacticRegion)
+
+    <input type="submit" value="Create" class="btn btn-default" />
+}
+@Html.ActionLink("Back to List", "Index")

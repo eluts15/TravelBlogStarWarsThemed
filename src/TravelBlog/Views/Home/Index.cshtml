@@ -1,0 +1,49 @@
+﻿@model IEnumerable<TravelBlog.Models.Experience>
+
+@{
+    ViewData["Title"] = "Home Page";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Travel Blog</h2>
+<hr />
+<p>
+    @Html.ActionLink("Add New Experience", "Create")
+</p>
+<table>
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Date)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Description)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Location.Planet)
+        </th>
+        <th></th>
+    </tr>
+
+    @foreach(var exp in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(model => exp.Date) --
+            </td>
+            <td>
+                @Html.DisplayFor(model => exp.Description) --
+            </td>
+            <td>
+                @Html.DisplayFor(model => exp.Location.Planet) --
+            </td>
+            <td>
+                @Html.ActionLink("Edit", "Edit", new { id = exp.ExperienceId })
+                @Html.ActionLink("Details", "Details", new { id = exp.ExperienceId })
+                @Html.ActionLink("Delete", "Delete", new { id = exp.ExperienceId })
+            </td>
+        </tr>
+
+    }
+</table>
+
+

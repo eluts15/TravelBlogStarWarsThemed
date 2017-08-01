@@ -1,0 +1,17 @@
+﻿
+body {
+        background-image: url("https://www.sideshowtoy.com/assets/products/2171-c-3po/lg/star-wars-c-3po-sixth-scale-2171-01.jpg");
+        color: firebrick;
+        
+        background-size: cover;
+       
+}
+
+
+
+.yes {
+    background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS6kp7blmapPD0FC7oLlGUSlSEgzFlfWOheenlhAuwSZ2_DZSLSiQ");
+    background-size:cover;
+    color: orange;
+
+}
